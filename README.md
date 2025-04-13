@@ -29,4 +29,6 @@ Built With:-
   
 How to Run:-
 
-Open index.html in any modern web browser. Explore all pages linked via the navigation bar. Live Demo
+Open index.html in any modern web browser. Explore all pages linked via the navigation bar. 
+
+Live Demo : https://srushtikhandelwal.github.io/webwiz_final/
