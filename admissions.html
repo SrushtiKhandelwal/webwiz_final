@@ -29,7 +29,7 @@
       pointer-events: none;
     }
 
-    /* New Gradient & Animated Text for Title */
+    
     .hogwarts-title {
       font-family: 'Cinzel Decorative', serif;
       background: linear-gradient(90deg, #6cb7d0, #43d5ba, #0ab4b7, #2196f3, #9c27b0);
@@ -85,7 +85,7 @@
       transition: color 0.3s ease;
     }
 
-    /* Updated for multiple images sliding */
+   
     .moving-background {
       position: absolute;
       top: 0;
@@ -107,8 +107,8 @@
   font-weight: 700;
   font-family: 'Cinzel Decorative', cursive;
   color: #c2b5b5;  /* Dark text color */
-  background: linear-gradient(135deg, #2d2a6e, #1f1a4c);  /* Dark gradient background */
-  border: 2px solid #5d4b8b;  /* Slightly lighter border color for contrast */
+  background: linear-gradient(135deg, #2d2a6e, #1f1a4c); 
+  border: 2px solid #5d4b8b;
   border-radius: 12px;
   cursor: pointer;
   text-shadow:
@@ -132,13 +132,13 @@
   border-color: #ffffff;  
 }
 
-    /* Multiple background images sliding animation */
+    
     @keyframes moveBackground {
       0% { background-position: 0 0, 1000px 0, 2000px 0; }
       100% { background-position: -2000px 0, 0 0, 1000px 0; }
     }
 
-    /* Title section */
+   
     section {
       position: relative;
       z-index: 10;
@@ -161,11 +161,11 @@
 </head>
 <body class="bg-gradient-to-br from-black to-gray-900 text-white font-serif min-h-screen">
 
-  <!-- Particles background -->
+  
   <div id="particles-js"></div>
   <div class="moving-background"></div>
 
-  <!-- Nav Bar -->
+  
   <nav class="flex justify-center gap-6 text-lg bg-black bg-opacity-60 px-6 py-4 sticky top-0 z-50 shadow-md backdrop-blur-md font-[Cinzel_Decorative]">
     
     <a href="index.html">
@@ -187,7 +187,7 @@
   <button onclick="history.back()" class="glow-back-button">
     ⬅ Return
   </button>
-  <!-- Title Section -->
+  
   <section class="flex flex-col items-center relative z-10 text-center px-4 pt-20 pb-10">
     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold hogwarts-title mb-10">
       Admissions
@@ -213,7 +213,7 @@
   </footer>
   
 
-  <!-- Particle Configuration -->
+  
   <script>
     particlesJS("particles-js", {
       particles: {

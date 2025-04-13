@@ -45,8 +45,8 @@
   background-size: contain;
   animation: moveBackground 60s linear infinite;
   z-index: -2;
-  opacity: 0.15; /* 👈 Makes it more subtle */
-  filter: brightness(1.1) contrast(0.8); /* Optional: tweak look */
+  opacity: 0.15; 
+  filter: brightness(1.1) contrast(0.8); 
 }
 
 
@@ -99,7 +99,7 @@
       50% { transform: translateY(-20px); }
     }
 
-    /* Modal styles */
+   
     .modal {
       display: none;
       position: fixed;
@@ -108,7 +108,7 @@
       top: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 1); /* Fully opaque black */
+      background-color: rgba(0, 0, 0, 1); 
       justify-content: center;
       align-items: center;
       animation: sparkleEffect 2s ease-in-out infinite;
@@ -241,7 +241,7 @@
         document.getElementById('leftCurtain').classList.add('open');
         document.getElementById('rightCurtain').classList.add('open');
   
-        // Optional: fade out rest of overlay
+
         setTimeout(() => {
           document.getElementById('curtainOverlay').remove();
         }, 2000);
@@ -283,7 +283,7 @@
     </h1>
   
     <div class="flex flex-col md:flex-row justify-center items-center gap-10 bg-black bg-opacity-60 p-6 rounded-lg text-white max-w-5xl mb-8">
-      <!-- Dumbledore Left -->
+      
       <div class="flex-1">
         <img src="87163639_9851079.jpg" alt="Albus Dumbledore"
   class="rounded-xl shadow-lg w-40 md:w-52 border-2 border-yellow-300 mx-auto mb-4 md:mb-0 animate-zoom" />
@@ -301,7 +301,7 @@
           if (k < dumbledoreQuote.length) {
             quoteElement.textContent += dumbledoreQuote.charAt(k);
             k++;
-            setTimeout(typeWriter3, 30); // Slightly slower for dramatic effect
+            setTimeout(typeWriter3, 30); 
           }
         }
       
@@ -311,12 +311,12 @@
       </script>
       
   
-      <!-- Sorting Hat Right with Button Below -->
+     
 <div class="flex-1 flex flex-col items-center relative">
   <img src="sorting.jpg" alt="Sorting Hat"
   class="sorting-hat-image rounded-xl w-60 md:w-72 lg:w-80 mx-auto shadow-xl animate-zoom-bounce" />
 
-  <!-- Button moved here -->
+  
   <button id="sortButton" class="mt-6 px-6 py-3 bg-yellow-400 text-black font-semibold rounded btn-hover transition text-center">
     Get Yourself Sorted Into a House<br>!! CLICK HERE !!
   </button>
@@ -327,7 +327,7 @@
   </section>
   
 
-  <!-- Sorting Modal -->
+  
   <div id="sortingModal" class="modal">
     <div class="modal-content">
       <h2 class="text-2xl font-bold sparkle-text">Sorting Hat</h2>

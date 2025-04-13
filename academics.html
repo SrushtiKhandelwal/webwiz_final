@@ -21,7 +21,7 @@
       position: fixed;
       width: 100%;
       height: 100%;
-      z-index: -1; /* Keep particles in the background */
+      z-index: -1; 
       top: 0;
       left: 0;
       background: transparent;
@@ -38,7 +38,7 @@
       background-size: cover;
       background-position: center;
       animation: moveBackground 60s linear infinite;
-      z-index: -2; /* Ensure moving background is behind everything else */
+      z-index: -2;
     }
 
     @keyframes moveBackground {
@@ -104,9 +104,9 @@
   font-size: 1.1rem;
   font-weight: 700;
   font-family: 'Cinzel Decorative', cursive;
-  color: #c2b5b5;  /* Dark text color */
-  background: linear-gradient(135deg, #2d2a6e, #1f1a4c);  /* Dark gradient background */
-  border: 2px solid #5d4b8b;  /* Slightly lighter border color for contrast */
+  color: #c2b5b5; 
+  background: linear-gradient(135deg, #2d2a6e, #1f1a4c);  
+  border: 2px solid #5d4b8b;  
   border-radius: 12px;
   cursor: pointer;
   text-shadow:
@@ -134,14 +134,14 @@
       transition: color 0.3s ease;
     }
 
-    /* Updated z-index and positioning for dropdown */
+    
     nav {
-      position: relative; /* Ensure nav is on top */
+      position: relative; 
       z-index: 10;
     }
 
     nav ul li .group {
-      position: relative; /* Ensure dropdown is on top of other elements */
+      position: relative; 
     }
 
     nav ul li .group:hover ul {
@@ -150,7 +150,7 @@
 
     nav ul li a {
       position: relative;
-      z-index: 20; /* Make sure nav links are clickable */
+      z-index: 20; 
     }
 
     nav ul li .group ul {
@@ -160,11 +160,11 @@
       display: none;
       background-color: rgba(0, 0, 0, 0.9);
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-      z-index: 30; /* Ensure dropdown appears above everything */
+      z-index: 30; 
     }
 
     nav ul li .group ul li {
-      z-index: 40; /* Ensure dropdown items are above others */
+      z-index: 40; 
     }
 
     footer {
@@ -174,7 +174,7 @@
       text-align: center;
       padding: 10px;
       position: relative;
-      z-index: 10; /* Footer is above background */
+      z-index: 10; 
     }
 
     footer p {
@@ -185,11 +185,11 @@
   </style>
 </head>
 <body class="bg-gradient-to-br from-black to-gray-900 text-white font-serif min-h-screen">
-  <!-- Particles background -->
+  
   <div id="particles-js"></div>
   <div class="moving-background"></div>
 
-  <!-- Nav Bar -->
+  
   <nav class="flex justify-center gap-6 text-lg bg-black bg-opacity-60 px-6 py-4 sticky top-0 z-50 shadow-md backdrop-blur-md font-[Cinzel_Decorative]">
     <a href="index.html">
       <img src="logo_webwiz!!!.png" alt="Logo" class="h-10 w-20 rounded-full hover:scale-105 transition-transform duration-300">
@@ -224,7 +224,7 @@
   <button onclick="history.back()" class="glow-back-button">
     ⬅ Return
   </button>
-  <!-- Title Section -->
+  
   <section class="flex flex-col items-center relative z-10 text-center px-4 pt-20 pb-10">
     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold hogwarts-title mb-10">
       Academics
@@ -247,7 +247,7 @@
         if (j < text2.length) {
           element2.textContent += text2.charAt(j);
           j++;
-          setTimeout(typeWriter2, 25); // Adjust speed here if needed
+          setTimeout(typeWriter2, 25); 
         }
       }
     
@@ -287,7 +287,7 @@
     </div>
   </footer>
   
-  <!-- Particle Configuration -->
+  
   <script>
     particlesJS("particles-js", {
       particles: {

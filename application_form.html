@@ -108,6 +108,7 @@
 
     input[type="text"],
     input[type="date"],
+    input[type="email"],
     textarea {
       width: 100%;
       padding: 0.5rem;
@@ -163,30 +164,43 @@
   <h1 class="glow-heading">Hogwarts School of Witchcraft and Wizardry</h1>
   <h2 class="glow-heading">Application for Admission</h2>
 
-  <!-- ✉️ Hogwarts Form Submission -->
+  
   <form action="https://formsubmit.co/srushtikhandelwal1205@gmail.com" method="POST">
-    <!-- Disable CAPTCHA -->
-    <input type="hidden" name="_captcha" value="false">
+    
+    <input type="hidden" name="_captcha" value="false" />
+    <input type="hidden" name="_template" value="table" />
+    <input type="hidden" name="_autoresponse" value="Thank you for applying to Hogwarts School of Witchcraft and Wizardry! 🦉✨ Your application has been received. Please await further instructions via Owl Post.">
 
-    <!-- FORM FIELDS -->
+   
+    <label>Your Email (for confirmation):
+      <input type="email" name="email" required />
+    </label>
+
+    
     <label>Name:
       <input type="text" name="name" required />
     </label>
+
     <label>Date of Birth:
       <input type="date" name="dob" required />
     </label>
+
     <label>General Location:
       <input type="text" name="location" />
     </label>
+
     <label>Muggle Mailing Address:
       <input type="text" name="address" />
     </label>
+
     <label>Muggle Telephone Number:
       <input type="text" name="phone" />
     </label>
+
     <label>Name of Owl:
       <input type="text" name="owlname" />
     </label>
+
     <label>Semester for which you are applying:
       <input type="text" name="semester" />
     </label>
