@@ -1,3 +1,7 @@
+![Screenshot 2025-04-13 235456](https://github.com/user-attachments/assets/e71371ad-312c-489f-8cce-23c3c68c9d0b)
+![Screenshot 2025-04-13 235438](https://github.com/user-attachments/assets/fbaf571f-9924-41b0-a995-a389fa8d9e79)
+![Screenshot 2025-04-13 235351](https://github.com/user-attachments/assets/3c0b95b0-9168-44df-8789-79b921dcbb53)
+![Screenshot 2025-04-13 235339](https://github.com/user-attachments/assets/25cf7f7a-d874-44b0-b000-724bad2336af)
 Hogwarts School of Witchcraft and Wizardry — College Website
 
 Welcome to the official college website of the Hogwarts School of Witchcraft and Wizardry, created as a magical and interactive web project for WebWizard 3.0.
