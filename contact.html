@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact | Hogwarts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+  <style>
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      font-family: 'Cinzel Decorative', serif;
+    }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      background: transparent;
+      pointer-events: none;
+    }
+
+    .hogwarts-title {
+      font-family: 'Cinzel Decorative', serif;
+      background: linear-gradient(90deg, #165b4e, #383f9f, #0f8525, #0e304c, #720a85);
+      background-size: 500%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 15px #1d9c9e, 0 0 30px #661d8b, 0 0 45px #1ae3dd, 0 0 60px #2196f3;
+      animation: floatGlow 4s ease-in-out infinite alternate, gradientShift 6s ease-in-out infinite, bounce 2s ease-in-out infinite;
+      display: inline-block;
+    }
+
+    @keyframes floatGlow {
+      0% {
+        transform: translateY(0);
+        text-shadow: 0 0 15px #12646f, 0 0 30px #133c63, 0 0 45px #8d2099, 0 0 60px #2196f3;
+      }
+      100% {
+        transform: translateY(-15px);
+        text-shadow: 0 0 25px #fff700, 0 0 35px #ff9800, 0 0 50px #f44336, 0 0 65px #2196f3;
+      }
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    nav ul li a:hover {
+      color: #fcd34d;
+      transition: color 0.3s ease;
+    }
+
+    .btn-hover:hover {
+      transform: scale(1.1);
+      background-color: #fcd34d;
+      transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    }
+
+    .moving-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('light bg.jpg'), url('hogwarts-hall.jpg'), url('students-in-staircase-hogwarts-qxgddgkdwuyi0j3t.jpg');
+      background-size: cover;
+      background-position: center;
+      animation: moveBackground 60s linear infinite;
+      z-index: -2;
+    }
+
+    .glow-back-button {
+  display: inline-block;
+  margin: 1rem auto 2rem;
+  padding: 0.6rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: 'Cinzel Decorative', cursive;
+  color: #c2b5b5;  /* Dark text color */
+  background: linear-gradient(135deg, #2d2a6e, #1f1a4c);  /* Dark gradient background */
+  border: 2px solid #5d4b8b;  /* Slightly lighter border color for contrast */
+  border-radius: 12px;
+  cursor: pointer;
+  text-shadow:
+    0 0 5px #4a3c87,    
+    0 0 10px #6a56a8,
+    0 0 15px #8a68c9;
+  box-shadow:
+    0 0 5px #4a3c87,    
+    0 0 15px #6a56a8,
+    0 0 25px #8a68c9;
+  transition: all 0.3s ease-in-out;
+}
+
+.glow-back-button:hover {
+  background: linear-gradient(135deg, #2d2a6e, #1f1a4c);  
+  box-shadow:
+    0 0 10px #6a56a8,
+    0 0 20px #8a68c9,
+    0 0 30px #b388eb;  
+  color: #ffffff;
+  border-color: #ffffff;  
+}
+
+    @keyframes moveBackground {
+      0% { background-position: 0 0, 1000px 0, 2000px 0; }
+      100% { background-position: -2000px 0, 0 0, 1000px 0; }
+    }
+
+    section {
+      position: relative;
+      z-index: 10;
+    }
+
+    section p, form, footer {
+      font-family: 'Cinzel', serif;
+    }
+
+    form {
+      max-width: 600px;
+      width: 100%;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      border: none;
+      font-family: 'Cinzel', serif;
+    }
+
+    form button {
+      background-color: #fcd34d;
+      color: black;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      font-family: 'Cinzel', serif;
+    }
+
+    form button:hover {
+      background-color: #f9d10d;
+      transform: scale(1.05);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    footer {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-black to-gray-900 text-white min-h-screen">
+
+  <div id="particles-js"></div>
+  <div class="moving-background"></div>
+
+  <!-- Nav Bar -->
+  <nav class="flex justify-center gap-6 text-lg bg-black bg-opacity-60 px-6 py-4 sticky top-0 z-50 shadow-md backdrop-blur-md font-[Cinzel_Decorative]">
+    <div class="flex items-center space-x-3">
+      <img src="logo_webwiz!!!.png" alt="Logo" class="h-10 w-20 rounded-full">
+      <span class="text-2xl font-bold font-serif"></span>
+    </div>
+    
+    <ul class="flex flex-wrap justify-center gap-6">
+      <li><a href="index.html" class="inline-block transform hover:-translate-y-1 transition-all duration-300 underline-offset-4 hover:underline hover:text-yellow-300">Home</a></li>
+<li><a href="about.html" class="inline-block transform hover:-translate-y-1 transition-all duration-300 underline-offset-4 hover:underline hover:text-yellow-300">About</a></li>
+<li><a href="academics.html" class="inline-block transform hover:-translate-y-1 transition-all duration-300 underline-offset-4 hover:underline hover:text-yellow-300">Academics</a></li>
+
+<li><a href="admissions.html" class="inline-block transform hover:-translate-y-1 transition-all duration-300 underline-offset-4 hover:underline hover:text-yellow-300">Admissions</a></li>
+<li><a href="contact.html" class="inline-block transform hover:-translate-y-1 transition-all duration-300 underline-offset-4 hover:underline hover:text-yellow-300">Contact</a></li>
+
+    </ul>
+  </nav>
+
+  <button onclick="history.back()" class="glow-back-button">
+    ⬅ Return
+  </button>
+
+
+  <!-- Contact Section -->
+  <section class="flex flex-col items-center text-center px-4 pt-20 pb-10">
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold hogwarts-title mb-10">
+      Contact Us
+    </h1>
+    <div class="bg-black bg-opacity-60 p-10 rounded-lg inline-block mt-4">
+      <p class="text-xl max-w-2xl mx-auto mb-6">Have questions about spells, sorting hats, or your first broomstick? Reach out to us below and we’ll send an owl with the answers!</p>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn-hover mt-2">Send Owl</button>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- Particle Configuration -->
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 150, density: { enable: true, value_area: 800 } },
+        color: { value: "#fcd34d" },
+        shape: { type: "circle" },
+        opacity: { value: 0.7, random: true },
+        size: { value: 4, random: true },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#7dd3fc",
+          opacity: 0.5,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: "none",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          bounce: false
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: true, mode: "push" },
+          resize: true
+        },
+        modes: {
+          repulse: { distance: 100, duration: 0.4 },
+          push: { particles_nb: 4 }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
+
+
+<section>
+    <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+      <div class="mt-10 flex justify-center gap-20 text-3xl">
+        <a href="https://github.com/SrushtiKhandelwal" target="_blank" class="text-white hover:text-sky-400 transition">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/srushtikhandelwal" target="_blank" class="text-white hover:text-blue-500 transition">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com/srushti.khandelwal" target="_blank" class="text-white hover:text-blue-500 transition">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://twitter.com/@SrushtiKha74108" target="_blank" class="text-white hover:text-blue-400 transition">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="mt-20 text-sm">
+    © 2025 Hogwarts School Of Witchcraft And Wizardry. All rights reserved. | Mischief Managed 
+  </footer>
+</body>
+</html>
+

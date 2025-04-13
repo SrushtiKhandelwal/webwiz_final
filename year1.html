@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>First Year Subjects</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background: radial-gradient(ellipse at top, #1a1a2e, #000000);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('light bg.jpg');
+      opacity: 0.06;
+      z-index: 0;
+      pointer-events: none;
+      animation: twinkle 20s infinite;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.06; }
+      50% { opacity: 0.12; }
+    }
+
+    .magic-card {
+      perspective: 1000px;
+    }
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+    .magic-card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+      border: 2px solid rgba(255, 215, 0, 0.3);
+    }
+    .card-front {
+      background: linear-gradient(145deg, #1f2937, #111827);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .card-back {
+      background: linear-gradient(145deg, #facc15, #fbbf24);
+      transform: rotateY(180deg);
+      color: #111827;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .card-front img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 9999px;
+      border: 5px solid #facc15;
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+      transition: transform 0.3s;
+    }
+    .magic-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .glow-back-button {
+  display: inline-block;
+  margin: 1rem auto 2rem;
+  padding: 0.6rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: 'Cinzel Decorative', cursive;
+  color: #c2b5b5;  /* Dark text color */
+  background: linear-gradient(135deg, #2d2a6e, #1f1a4c);  /* Dark gradient background */
+  border: 2px solid #5d4b8b;  /* Slightly lighter border color for contrast */
+  border-radius: 12px;
+  cursor: pointer;
+  text-shadow:
+    0 0 5px #4a3c87,    
+    0 0 10px #6a56a8,
+    0 0 15px #8a68c9;
+  box-shadow:
+    0 0 5px #4a3c87,    
+    0 0 15px #6a56a8,
+    0 0 25px #8a68c9;
+  transition: all 0.3s ease-in-out;
+}
+
+.glow-back-button:hover {
+  background: linear-gradient(135deg, #2d2a6e, #1f1a4c);  
+  box-shadow:
+    0 0 10px #6a56a8,
+    0 0 20px #8a68c9,
+    0 0 30px #b388eb;  
+  color: #ffffff;
+  border-color: #ffffff;  
+}
+
+    h1, h2 {
+      font-family: 'Cinzel Decorative', serif;
+    }
+  </style>
+</head>
+
+<body class="text-white min-h-screen p-6 relative z-10">
+  <button onclick="history.back()" class="glow-back-button">
+    ⬅ Return to Previous Page
+  </button>
+  <h1 class="text-5xl font-bold text-center mb-14 text-yellow-300 drop-shadow-md tracking-wider">
+    First Year Subjects
+  </h1>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 max-w-7xl mx-auto place-items-center relative z-10">
+
+    <!-- Transfiguration -->
+    <div class="magic-card w-full max-w-sm h-[450px]">
+      <div class="card-inner w-full h-full">
+        <div class="card-face card-front">
+          <img src="mcgonaggal.jpg" alt="Professor McGonagall" />
+          <h2 class="text-2xl text-yellow-300 mt-4">Transfiguration</h2>
+          <p class="text-sm text-gray-300 mt-1">Taught by Professor McGonagall</p>
+        </div>
+        <div class="card-face card-back">
+          <h3 class="text-xl font-bold mb-2">Transfiguration</h3>
+          <p class="text-center px-4">Transform objects and creatures into other forms using advanced magic.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Charms -->
+    <div class="magic-card w-full max-w-sm h-[450px]">
+      <div class="card-inner w-full h-full">
+        <div class="card-face card-front">
+          <img src="flit.webp" alt="Professor Flitwick" />
+          <h2 class="text-2xl text-yellow-300 mt-4">Charms</h2>
+          <p class="text-sm text-gray-300 mt-1">Taught by Professor Flitwick</p>
+        </div>
+        <div class="card-face card-back">
+          <h3 class="text-xl font-bold mb-2">Charms</h3>
+          <p class="text-center px-4">Master spells that give objects magical properties and effects.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Potions -->
+    <div class="magic-card w-full max-w-sm h-[450px]">
+      <div class="card-inner w-full h-full">
+        <div class="card-face card-front">
+          <img src="snape2.png" alt="Professor Snape" />
+          <h2 class="text-2xl text-yellow-300 mt-4">Potions</h2>
+          <p class="text-sm text-gray-300 mt-1">Taught by Professor Snape</p>
+        </div>
+        <div class="card-face card-back">
+          <h3 class="text-xl font-bold mb-2">Potions</h3>
+          <p class="text-center px-4">Brew potions and elixirs with magical effects using precise techniques.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DADA -->
+    <div class="magic-card w-full max-w-sm h-[450px]">
+      <div class="card-inner w-full h-full">
+        <div class="card-face card-front">
+          <img src="lupin2.jpg" alt="Professor Lupin" />
+          <h2 class="text-xl text-yellow-300 text-center mt-4">Defence Against the Dark Arts</h2>
+          <p class="text-sm text-gray-300 mt-1">Taught by Professor Lupin</p>
+        </div>
+        <div class="card-face card-back">
+          <h3 class="text-xl font-bold mb-2">Defence Against the Dark Arts</h3>
+          <p class="text-center px-4">Learn defensive spells and tactics to protect against dark forces.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Herbology -->
+    <div class="magic-card w-full max-w-sm h-[450px]">
+      <div class="card-inner w-full h-full">
+        <div class="card-face card-front">
+          <img src="sprout2.jpg" alt="Professor Sprout" />
+          <h2 class="text-2xl text-yellow-300 mt-4">Herbology</h2>
+          <p class="text-sm text-gray-300 mt-1">Taught by Professor Sprout</p>
+        </div>
+        <div class="card-face card-back">
+          <h3 class="text-xl font-bold mb-2">Herbology</h3>
+          <p class="text-center px-4">Study magical plants, their properties, and how to use them safely.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 150, density: { enable: true, value_area: 800 } },
+        color: { value: "#fcd34d" },
+        shape: { type: "circle" },
+        opacity: { value: 0.7, random: true },
+        size: { value: 4, random: true },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#7dd3fc",
+          opacity: 0.5,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: "none",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          bounce: false,
+          attract: { enable: false }
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: true, mode: "push" },
+          resize: true
+        },
+        modes: {
+          repulse: { distance: 100, duration: 0.4 },
+          push: { particles_nb: 4 }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
+</body>
+</html>

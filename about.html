@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Hogwarts School Of Witchcraft And Wizardry</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+  
+
+  <style>
+    body {
+      margin: 0;
+      overflow-x: hidden;
+
+      nav {
+  font-family: 'Cinzel Decorative', serif;
+}
+
+    }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      background: transparent;
+      pointer-events: none;
+    }
+
+    /* New Gradient & Animated Text for Title */
+    .hogwarts-title {
+      font-family: 'Cinzel Decorative', serif;
+      background: linear-gradient(90deg, #6cb7d0, #43d5ba, #0ab4b7, #2196f3, #9c27b0);
+      background-size: 500%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 15px #1d9c9e, 0 0 30px #661d8b, 0 0 45px #1ae3dd, 0 0 60px #2196f3;
+      animation: floatGlow 4s ease-in-out infinite alternate, gradientShift 6s ease-in-out infinite, bounce 2s ease-in-out infinite;
+      display: inline-block;
+    }
+
+    @keyframes floatGlow {
+      0% {
+        transform: translateY(0);
+        text-shadow: 0 0 15px #1092a3, 0 0 30px #3886cf, 0 0 45px #ba63c4, 0 0 60px #2196f3;
+      }
+      100% {
+        transform: translateY(-15px);
+        text-shadow: 0 0 25px #fff700, 0 0 35px #ff9800, 0 0 50px #f44336, 0 0 65px #2196f3;
+      }
+    }
+
+    @keyframes gradientShift {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    .btn-hover:hover {
+      transform: scale(1.1);
+      background-color: #fcd34d;
+      transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    }
+
+    nav ul li a:hover {
+      color: #fcd34d;
+      transition: color 0.3s ease;
+    }
+
+    /* Updated for multiple images sliding */
+    .moving-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('hogwarts-legacy-castle.jpg'), url('hogwarts-legacy-castle'), url('students-in-staircase-hogwarts-qxgddgkdwuyi0j3t.jpg');
+      background-size: cover;
+      background-position: center;
+      animation: moveBackground 60s linear infinite;
+      z-index: -2;
+    }
+
+    .glow-back-button {
+  display: inline-block;
+  margin: 1rem auto 2rem;
+  padding: 0.6rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: 'Cinzel Decorative', cursive;
+  color: #c2b5b5;  /* Dark text color */
+  background: linear-gradient(135deg, #2d2a6e, #1f1a4c);  /* Dark gradient background */
+  border: 2px solid #5d4b8b;  /* Slightly lighter border color for contrast */
+  border-radius: 12px;
+  cursor: pointer;
+  text-shadow:
+    0 0 5px #4a3c87,    
+    0 0 10px #6a56a8,
+    0 0 15px #8a68c9;
+  box-shadow:
+    0 0 5px #4a3c87,    
+    0 0 15px #6a56a8,
+    0 0 25px #8a68c9;
+  transition: all 0.3s ease-in-out;
+}
+
+.glow-back-button:hover {
+  background: linear-gradient(135deg, #2d2a6e, #1f1a4c);  
+  box-shadow:
+    0 0 10px #6a56a8,
+    0 0 20px #8a68c9,
+    0 0 30px #b388eb;  
+  color: #ffffff;
+  border-color: #ffffff;  
+}
+
+    /* Multiple background images sliding animation */
+    @keyframes moveBackground {
+      0% { background-position: 0 0, 1000px 0, 2000px 0; }
+      100% { background-position: -2000px 0, 0 0, 1000px 0; }
+    }
+
+    /* Title section */
+    section {
+      position: relative;
+      z-index: 10;
+    }
+
+    section p {
+      font-size: 1.25rem;
+      margin-top: 1rem;
+      color: #fff;
+    }
+
+    footer {
+      margin-top: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-black to-gray-900 text-white font-serif min-h-screen">
+
+  <!-- Particles background -->
+  <div id="particles-js"></div>
+  <div class="moving-background"></div>
+
+  <!-- Nav Bar -->
+  <nav class="flex justify-center gap-6 text-lg bg-black bg-opacity-60 px-6 py-4 sticky top-0 z-50 shadow-md backdrop-blur-md font-[Cinzel_Decorative]">
+    <div class="flex items-center space-x-3">
+      <img src="logo_webwiz!!!.png" alt="Logo" class="h-10 w-20 rounded-full">
+      <span class="text-2xl font-bold font-serif"></span>
+    </div>
+    
+    <ul class="flex flex-wrap justify-center gap-6">
+      <li><a href="index.html" class="inline-block transform hover:-translate-y-1 transition-all duration-300 underline-offset-4 hover:underline hover:text-yellow-300">Home</a></li>
+<li><a href="about.html" class="inline-block transform hover:-translate-y-1 transition-all duration-300 underline-offset-4 hover:underline hover:text-yellow-300">About</a></li>
+<li><a href="academics.html" class="inline-block transform hover:-translate-y-1 transition-all duration-300 underline-offset-4 hover:underline hover:text-yellow-300">Academics</a></li>
+
+<li><a href="admissions.html" class="inline-block transform hover:-translate-y-1 transition-all duration-300 underline-offset-4 hover:underline hover:text-yellow-300">Admissions</a></li>
+<li><a href="contact.html" class="inline-block transform hover:-translate-y-1 transition-all duration-300 underline-offset-4 hover:underline hover:text-yellow-300">Contact</a></li>
+
+    </ul>
+  </nav>
+
+  <button onclick="history.back()" class="glow-back-button">
+    ⬅ Return
+  </button>
+  <!-- Title Section -->
+  <section class="flex flex-col items-center relative z-10 text-center px-4 pt-20 pb-10">
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold hogwarts-title mb-10">
+      About Hogwarts
+    </h1>
+    <div class="bg-black bg-opacity-60 p-10 rounded-lg inline-block mt-4">
+      <p id="typewriter-text" class="text-xl max-w-2xl mx-auto whitespace-pre-line text-white font-serif"></p>
+    </div>
+    
+    <script>
+      const text = `Welcome to the enchanted halls of our magical domain — a place where curiosity meets wonder, and knowledge takes flight on the wings of imagination. Inspired by the timeless world of wizardry, our goal is to blend learning with the charm of storytelling, inviting everyone to explore, discover, and connect.
+    
+    Whether you're a lifelong fan of magic or a curious newcomer, you'll find yourself immersed in a world where every subject has a story, every name a legacy, and every moment a spellbinding opportunity to learn something new. We believe magic isn't just in wands and spells — it's in the thrill of discovering, the joy of creating, and the spark of inspiration that comes with every journey into the unknown.
+    
+    Here, you’re not just a visitor — you’re part of the magic.`;
+    
+      const element = document.getElementById("typewriter-text");
+      let i = 0;
+    
+      function typeWriter() {
+        if (i < text.length) {
+          element.textContent += text.charAt(i);
+          i++;
+          setTimeout(typeWriter, 60); // Adjust typing speed here
+        }
+      }
+    
+      window.onload = typeWriter;
+    </script>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </section>
+
+  <!-- Footer -->
+  <footer class="mt-20 bg-black bg-opacity-70 text-center py-4 text-sm relative z-10">
+    © 2025 Hogwarts School Of Witchcraft And Wizardry. All rights reserved. | Mischief Managed 
+  </footer>
+
+  <!-- Particle Configuration -->
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 150, density: { enable: true, value_area: 800 } },
+        color: { value: "#fcd34d" },
+        shape: { type: "circle" },
+        opacity: { value: 0.7, random: true },
+        size: { value: 4, random: true },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#7dd3fc",
+          opacity: 0.5,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: "none",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          bounce: false,
+          attract: { enable: false }
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: true, mode: "push" },
+          resize: true
+        },
+        modes: {
+          repulse: { distance: 100, duration: 0.4 },
+          push: { particles_nb: 4 }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
+
+</body>
+</html>

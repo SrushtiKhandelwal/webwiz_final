@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hogwarts Application Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- ✨ Owl Delivery Alert Script -->
+  <script>
+    function sendOwl(event) {
+      event.preventDefault(); // Prevent form submission
+      alert(" Your Hogwarts application has been tied to the owl’s leg and is now on the way to the castle. Mischief Managed!");
+    }
+  </script>
+
+  <style>
+
+
+.glow-heading {
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 3.5rem;
+  text-align: center;
+  font-weight: 700;
+  color: #352664; /* Lavender-purple tone */
+  text-shadow:
+    0 0 4px #6a5acd,
+    0 0 8px #7b68ee,
+    0 0 12px #8a2be2,
+    0 0 18px #9b59b6,
+    0 0 24px #b388eb;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  animation: flicker 2.5s infinite ease-in-out;
+}
+
+
+@keyframes flicker {
+  0%, 100% {
+    text-shadow:
+      0 0 4px #6a5acd,
+      0 0 8px #7b68ee,
+      0 0 12px #8a2be2;
+  }
+  50% {
+    text-shadow:
+      0 0 6px #9b59b6,
+      0 0 14px #b388eb;
+  }
+}
+
+.glow-back-button {
+  display: inline-block;
+  margin: 1rem auto 2rem;
+  padding: 0.6rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: 'Cinzel Decorative', cursive;
+  color: #c2b5b5;  /* Dark text color */
+  background: linear-gradient(135deg, #2d2a6e, #1f1a4c);  /* Dark gradient background */
+  border: 2px solid #5d4b8b;  /* Slightly lighter border color for contrast */
+  border-radius: 12px;
+  cursor: pointer;
+  text-shadow:
+    0 0 5px #4a3c87,    
+    0 0 10px #6a56a8,
+    0 0 15px #8a68c9;
+  box-shadow:
+    0 0 5px #4a3c87,    
+    0 0 15px #6a56a8,
+    0 0 25px #8a68c9;
+  transition: all 0.3s ease-in-out;
+}
+
+.glow-back-button:hover {
+  background: linear-gradient(135deg, #2d2a6e, #1f1a4c);  
+  box-shadow:
+    0 0 10px #6a56a8,
+    0 0 20px #8a68c9,
+    0 0 30px #b388eb;  
+  color: #ffffff;
+  border-color: #ffffff;  
+}
+
+
+
+
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Quicksand&display=swap');
+
+    body {
+      background: url('https://images.unsplash.com/photo-1526304640581-d334cdbbf45e') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Quicksand', sans-serif;
+      color: #3b1f0e;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-family: 'Cinzel Decorative', cursive;
+      font-size: 3.5rem;
+      color: #e6c17c;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-family: 'Cinzel Decorative', cursive;
+      font-size: 2rem;
+      color: #fcebb5;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    form {
+      background: rgba(255, 248, 220, 0.95);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.4);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-family: 'Cinzel Decorative', cursive;
+      font-weight: bold;
+      color: #4b2e14;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.3rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background-color: #fff8e1;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    textarea {
+      height: 80px;
+      resize: vertical;
+    }
+
+    .checkbox-group,
+    .pet-group,
+    .special-group {
+      margin-top: 1rem;
+    }
+
+    .checkbox-group input,
+    .pet-group input,
+    .special-group input {
+      margin-right: 0.5rem;
+    }
+
+    .submit-section {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .submit-section button {
+      padding: 0.8rem 1.7rem;
+      font-size: 1.1rem;
+      background-color: #6d4c41;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      font-family: 'Cinzel Decorative', cursive;
+    }
+
+
+    .glow-back-button {
+  display: inline-block;
+  margin: 1rem auto 2rem;
+  padding: 0.6rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: 'Cinzel Decorative', cursive;
+  color: #c2b5b5;  /* Dark text color */
+  background: linear-gradient(135deg, #2d2a6e, #1f1a4c);  /* Dark gradient background */
+  border: 2px solid #5d4b8b;  /* Slightly lighter border color for contrast */
+  border-radius: 12px;
+  cursor: pointer;
+  text-shadow:
+    0 0 5px #4a3c87,    
+    0 0 10px #6a56a8,
+    0 0 15px #8a68c9;
+  box-shadow:
+    0 0 5px #4a3c87,    
+    0 0 15px #6a56a8,
+    0 0 25px #8a68c9;
+  transition: all 0.3s ease-in-out;
+}
+
+.glow-back-button:hover {
+  background: linear-gradient(135deg, #2d2a6e, #1f1a4c);  
+  box-shadow:
+    0 0 10px #6a56a8,
+    0 0 20px #8a68c9,
+    0 0 30px #b388eb;  
+  color: #ffffff;
+  border-color: #ffffff;  
+}
+    .submit-section button:hover {
+      background-color: #5d4037;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+    <button onclick="history.back()" class="glow-back-button">
+        ⬅ Return to Previous Page
+      </button>
+    <h1 class="glow-heading">Hogwarts School of Witchcraft and Wizardry</h1>
+
+  <h2 class="glow-heading">Application for Admission</h2>
+
+  
+  <form onsubmit="sendOwl(event)">
+    <label>Name:
+      <input type="text" name="name" />
+    </label>
+    <label>Date of Birth:
+      <input type="date" name="dob" />
+    </label>
+    <label>General Location:
+      <input type="text" name="location" />
+    </label>
+    <label>Muggle Mailing Address (Don’t post this online!):
+      <input type="text" name="address" />
+    </label>
+    <label>Muggle Telephone Number (Don’t post this online!):
+      <input type="text" name="phone" />
+    </label>
+    <label>Name of Owl:
+      <input type="text" name="owlname" />
+    </label>
+    <label>Semester for which you are applying:
+      <input type="text" name="semester" />
+    </label>
+
+    <div class="checkbox-group">
+      <label>How long have you known you are a witch/wizard?</label>
+      <label><input type="checkbox" /> Since forever</label>
+      <label><input type="checkbox" /> Since I got my Hogwarts letter</label>
+      <label><input type="checkbox" /> Since I turned a relative into an animal/vegetable/mineral</label>
+      <label><input type="checkbox" /> I'm a Muggle applying for the Muggle Exchange Program</label>
+    </div>
+
+    <div class="pet-group">
+      <label>Will you be bringing a pet?</label>
+      <label><input type="checkbox" /> Cat</label>
+      <label><input type="checkbox" /> Owl</label>
+      <label><input type="checkbox" /> Toad</label>
+      <label><input type="checkbox" /> Rat</label>
+      <label>Other: <input type="text" name="other_pet" /></label>
+    </div>
+
+    <div class="special-group">
+      <label>Will you require special accommodations?</label>
+      <label><input type="checkbox" /> Captioned-air charm</label>
+      <label><input type="checkbox" /> Seeing-eye toad</label>
+      <label><input type="checkbox" /> Note-taking quill</label>
+    </div>
+
+    <div class="submit-section">
+      <button type="submit">Dispatch via Owl Post</button>
+    </div>
+  </form>
+</body>
+</html>
+
